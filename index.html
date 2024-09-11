@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment2</title>
+</head>
+<body>
+   <h2>assignment</h2>
+</body>
+<script>
+   let list=[1,2,3,3,3,10,5,3,1,2,'html','css']
+   console.log(list)
+// 1.Write a Javascript program that removes the duplicate elements from an array.
+    function removeDuplicates(array){
+        return   array.filter((el,index) => array.indexOf(el) === index)
+    }
+    console.log(removeDuplicates(list));
+
+    const names=['ram','akila','vamshi','gaya','ram','gaya','nikhil','akila','pooja']
+    const uniquenames=[... new Set(names)]
+    console.log(uniquenames)
+
+// 2.Write a JavaScript program to create a new string without the first and last characters of a given string
+     let str = 'Himaja';
+     function removeFirstAndLastChar(str) {
+    return str.substring(1, str.length - 1);
+}
+    console.log(removeFirstAndLastChar(str));
+
+//3.Write a function that takes an array of strings as input and prints each element to the console using the forEach method.
+let stringsArray = ['apple', 'banana', 'grapes', 'orange'];
+stringsArray.forEach(strings => {
+    console.log(strings);  
+});
+
+// 4.Write a function that takes an array of numbers as input and returns true if any of the numbers are negative, otherwise false, using the some method.
+function isNegativeNumber(arr) {
+    return arr.some(num => num < 0);
+}
+let numbersArray = [1, 2, 3, -4, 5];
+console.log(isNegativeNumber(numbersArray));
+
+// 5.Write a function that takes an array of numbers as input, filters out the even numbers, and then returns the sum of the remaining numbers using a combination of filter and reduce methods.
+function sumOfOddNumbers(arr) {
+    const oddNumbers = arr.filter(num => num % 2 !== 0);    
+    const sum = oddNumbers.reduce((total, num) => total + num, 0);
+    return sum;
+}
+let numbersArray1 = [1, 2, 3, 4, 5, 6, 7];
+console.log(sumOfOddNumbers(numbersArray1));
+</script>
+</html>
